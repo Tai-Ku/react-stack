@@ -48,13 +48,13 @@ class Login extends Component {
       }
     } catch (error) {
       this.setState({
-        errMessage: "missing parameters input",
+        errMessage: "issing parameters input",
       });
     }
   };
   render() {
     return (
-      <div className="login-bg">
+      <div className="login-b">
         <div className="login-container">
           <div className="login-content row">
             <div className="col-12 text-content">Login</div>
