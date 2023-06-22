@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
 import "./Login.scss";
-import handleLoginApi from "../../services/userService";
+import { handleLoginApi } from "../../services/userService";
 import * as actions from "../../store/actions";
 import { useDispatch } from "react-redux";
 import { FormattedMessage } from "react-intl";
@@ -41,20 +41,23 @@ class Login extends Component {
           errMsg: data.errMessage,
         });
       }
-      console.log(data.userData);
-      console.log(this.props.userLoginSucess);
+
       if (data && data.errCode === 0) {
         this.props.userLoginSucess(data.userData);
       }
     } catch (error) {
-      this.setState({
-        errMessage: "issing parameters input",
-      });
+      if (error.response.data) {
+        if (error.response.data.errCode !== 0) {
+          this.setState({
+            errMsg: error.response.data.errMessage,
+          });
+        }
+      }
     }
   };
   render() {
     return (
-      <div className="login-b">
+      <div className="login-bg">
         <div className="login-container">
           <div className="login-content row">
             <div className="col-12 text-content">Login</div>

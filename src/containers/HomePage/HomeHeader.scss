@@ -1,0 +1,63 @@
+.home-header-container {
+  padding: 0 20px;
+  height: 60px;
+  width: 100%;
+
+  .home-header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .left-content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 25%;
+      border: 1px solid green;
+
+      .header-logo {
+        height: 100%;
+        background: url(../../assets/images/bookingcare-2020.svg) center center
+          no-repeat;
+        width: 100%;
+        cursor: pointer;
+      }
+      i {
+        font-size: 25px;
+        color: grey;
+        cursor: pointer;
+      }
+    }
+    .center-content {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+      flex: auto;
+      border: 1px solid blueviolet;
+
+      .child-content {
+        .subtitle {
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+    .right-content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 25%;
+      border: 1px solid blue;
+      .support {
+        font: 25px;
+      }
+      .flag {
+      }
+    }
+  }
+}
+// home-header-content
