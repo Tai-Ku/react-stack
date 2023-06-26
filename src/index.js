@@ -6,6 +6,8 @@ import "./styles/styles.scss";
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
 import IntlProviderWrapper from "./hoc/IntlProviderWrapper";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme .css";
 
 import { Provider } from "react-redux";
 import reduxStore, { persistor } from "./redux";
